@@ -1,0 +1,84 @@
+.product-form-div {
+    padding-bottom: 50px;
+}
+
+.productType {
+    text-align: center;
+}
+
+form {
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    margin: 0 auto;
+    transition: all 1s;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input[type= "text"],
+form input[type= "number"],
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 3s ease;
+}
+
+form input[type= "text"]:focus,
+form input[type= "number"]:focus,
+form textarea:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 3s ease-in;
+}
+
+select {
+    appearance: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: palegreen;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #444;
+    width: 200px;
+    transition: 3s ease-out;
+}
+
+select:focus {
+    outline: rgb(red, green, blue);
+    box-shadow: 0 0 3px rgba(221, 57, 57, 0.5);
+    cursor: pointer;
+    transition: all 2s ease-in;
+}
+
+select option {
+    background-color: #f5f5f5;
+    color: #444;
+    font-weight: lighter;
+    transition: all 2s ease-in;
+}
+
+#footer {
+    position: fixed;
+  bottom: -100px; 
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  transition: bottom 0.3s ease-out;
+  margin-top: 20px;
+}
