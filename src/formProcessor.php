@@ -79,12 +79,16 @@ LEFT JOIN book ON products.id = book.product_id";
         $height = $_POST['height'];
         $width = $_POST['width'];
         $length = $_POST['length'];
-        $sql = "INSERT INTO furniture(product_id) VALUES (?)";
+        $sql = "INSERT INTO furniture (product_id) VALUES (?)";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("i", $product_id);
+        $stmt->execute();
+
+        $furniture_id = $conn->insert_id;
+
         $sql = "INSERT INTO dimensions (furniture_id, height, width, length) VALUES (?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("iddd",$product_id, $height, $width, $length);
+        $stmt->bind_param("iddd",$furniture_id, $height, $width, $length);
     
         // Executando a query
         if (!$stmt->execute()) {
